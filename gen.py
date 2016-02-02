@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+#!/usr/bin/python
+# coding=utf8
+
+header = """<!DOCTYPE html>
 <html lang="ko">
 <head>
   <title>나무위키 덤프</title>
@@ -41,48 +44,17 @@
   </div>
 
   <div class="container">
+"""
 
-<h3><span class="filename">namuwiki-160202.sql</span> (<span class="filesize">838M</span>)</h3>
-<table>
-  <tr>
-    <td colspan="3" class="md5">39841b31f52c921302963e80085a5ece
-  <tr>
-    <td>Mirror 1
-    <td><a href="https://dl.dropboxusercontent.com/u/22206273/namuwiki-160202.sql">Dropbox (direct link)</a>
-    <td><a href="https://dl.dropboxusercontent.com/u/22206273/namuwiki-160202.sql">📲</a>
-  <tr>
-    <td>Mirror 2
-    <td><a href="https://drive.google.com/open?id=0B6dpAIVkR_3-MEFJLTd6bGRXNHM">Google Drive</a>
-    <td><a href="https://drive.google.com/open?id=0B6dpAIVkR_3-MEFJLTd6bGRXNHM">📲</a>
-  <tr>
-    <td>Mirror 3
-    <td><a href="http://1drv.ms/1SCcwkX">Microsoft OneDrive</a>
-    <td><a href="http://1drv.ms/1SCcwkX">📲</a>
-</table>
-
-<h3><span class="filename">namuwiki-160202-sample.sql</span> (<span class="filesize">9.1M</span>)</h3>
-<table>
-  <tr>
-    <td colspan="3" class="md5">1d3c6ccb35a23a4394a1d1c13a7ecc21
-  <tr>
-    <td>Mirror 1
-    <td><a href="https://dl.dropboxusercontent.com/u/22206273/namuwiki-160202-sample.sql">Dropbox (direct link)</a>
-    <td><a href="https://dl.dropboxusercontent.com/u/22206273/namuwiki-160202-sample.sql">📲</a>
-  <tr>
-    <td>Mirror 2
-    <td><a href="https://drive.google.com/open?id=0B6dpAIVkR_3-b2NXNVhhV2t2Z1E">Google Drive</a>
-    <td><a href="https://drive.google.com/open?id=0B6dpAIVkR_3-b2NXNVhhV2t2Z1E">📲</a>
-  <tr>
-    <td>Mirror 3
-    <td><a href="http://1drv.ms/1SCcnho">Microsoft OneDrive</a>
-    <td><a href="http://1drv.ms/1SCcnho">📲</a>
-</table>
-
-  <h3>원본 파일명</h3>
-  <div class="origin"><a href="https://namu.wiki/w/나무위키:데이터베이스%20덤프">namuwiki160126.sql</a> (<a href="https://namu.wiki/w/나무위키:데이터베이스%20덤프">나무위키:데이터베이스 덤프</a>)
+def origin(filename):
+  link = 'https://namu.wiki/w/나무위키:데이터베이스%20덤프'
+  return """  <h3>원본 파일명</h3>
+  <div class="origin"><a href="%s">%s</a> (<a href="%s">나무위키:데이터베이스 덤프</a>)
   </div>
+"""%(link,filename,link,)
 
-  </div>
+
+footer = """  </div>
 
   <div class="appstore">
     <h3>오프라인 리더 앱 내려받기</h3>
@@ -99,4 +71,54 @@
 
 </body>
 </html>
+"""
 
+class TableView:
+  def __init__(self,filename,filesize,md5_hash):
+    self.mirrors = []
+    self.filename = filename
+    self.filesize = filesize
+    self.md5_hash = md5_hash
+
+  def add(self,name,link):
+    self.mirrors.append((name,link,))
+
+  def render(self):
+    print '<h3><span class="filename">%s</span> (<span class="filesize">%s</span>)</h3>'%(self.filename,self.filesize)
+    print '<table>'
+    print '  <tr>'
+    print '    <td colspan="3" class="md5">' + self.md5_hash
+    for i,(name,link,) in enumerate(self.mirrors):
+      print '  <tr>'
+      print '    <td>Mirror %d'%(i+1)
+      print '    <td><a href="%s">%s</a>'%(link,name)
+      print '    <td><a href="%s">📲</a>'%(link,)
+    print '</table>'
+    print
+
+class Storage:
+  D = 'Dropbox (direct link)'
+  G = 'Google Drive'
+  M = 'Microsoft OneDrive'
+
+def main():
+  print header
+
+  normal = TableView('namuwiki-160202.sql','838M','39841b31f52c921302963e80085a5ece')
+  normal.add(Storage.D, 'https://dl.dropboxusercontent.com/u/22206273/namuwiki-160202.sql')
+  normal.add(Storage.G, 'https://drive.google.com/open?id=0B6dpAIVkR_3-MEFJLTd6bGRXNHM')
+  normal.add(Storage.M, 'http://1drv.ms/1SCcwkX')
+  normal.render()
+
+  sample = TableView('namuwiki-160202-sample.sql','9.1M','1d3c6ccb35a23a4394a1d1c13a7ecc21')
+  sample.add(Storage.D, 'https://dl.dropboxusercontent.com/u/22206273/namuwiki-160202-sample.sql')
+  sample.add(Storage.G, 'https://drive.google.com/open?id=0B6dpAIVkR_3-b2NXNVhhV2t2Z1E')
+  sample.add(Storage.M, 'http://1drv.ms/1SCcnho')
+  sample.render()
+
+  print origin('namuwiki160126.sql')
+
+  print footer
+
+if __name__ == '__main__':
+  main()
