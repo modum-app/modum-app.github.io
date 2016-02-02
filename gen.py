@@ -113,7 +113,7 @@ def main():
   sample = TableView('namuwiki-160202-sample.sql','9.1M','1d3c6ccb35a23a4394a1d1c13a7ecc21')
   sample.add(Storage.D, 'https://dl.dropboxusercontent.com/u/22206273/namuwiki-160202-sample.sql')
   sample.add(Storage.G, 'https://drive.google.com/open?id=0B6dpAIVkR_3-b2NXNVhhV2t2Z1E')
-  sample.add(Storage.M, 'http://1drv.ms/1SCcnho')
+  sample.add(Storage.M, 'http://1drv.ms/1QYBsTR')
   sample.render()
 
   print origin('namuwiki160126.sql')
