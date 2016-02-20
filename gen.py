@@ -20,7 +20,7 @@ header = """<!DOCTYPE html>
   body { font-family:sans-serif; }
   a { color:royalblue; }
   h1 { font-size:1.3em; }
-  h3 { font-size:1em; }
+  h3 { margin-top:2em; font-size:1em; }
   .container div.desc { font-size:0.8em; }
   .container span.filename {}
   .container span.filesize {}
@@ -51,13 +51,13 @@ def origin(filename):
 def trouble():
   link1 = 'https://namu.wiki/w/나무위키:데이터베이스%20덤프'
   link2 = 'https://github.com/modum-app/build-namuwiki-sql'
-  return """  <h3>직접 덤프 만들기</h3>
-  <div class="trouble">위 링크가 동작하지 않는 경우에는 직접 덤프를 만든 후 iTunes에서 기기로 복사할 수 있습니다.
+  return """  <h3>데이터베이스 직접 만들기</h3>
+  <div class="trouble">위 링크가 동작하지 않는 경우에는 데이터베이스를 직접 만들고 iTunes에서 기기로 복사할 수 있습니다.
     <ol>
       <li><a href="%s">나무위키 공식 덤프</a> 내려받기
       <li><a href="%s">덤프 포맷 변환 도구</a> 내려받기
-      <li>변환 도구를 이용해 데이터베이스 생성 (컴퓨터 성능에 따라 수십분에서 한 시간 가량 소요)
-      <li>변환한 덤프를 <a href="https://support.apple.com/ko-kr/HT201301" title="iPhone, iPad 및 iPod touch에서의 파일 공유에 관하여">iTunes 파일 공유</a>를 이용해서 기기에 복사하면 끝
+      <li>변환 도구를 이용해 데이터베이스 생성<br>(성능에 따라 수십분에서 한 시간 가량 소요)
+      <li>생성한 데이터베이스를 <a href="https://support.apple.com/ko-kr/HT201301" title="iPhone, iPad 및 iPod touch에서의 파일 공유에 관하여">iTunes 파일 공유</a>를 이용해서 복사하면 끝
   </div>
 """%(link1,link2)
 
