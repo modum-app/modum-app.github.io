@@ -65,8 +65,8 @@ footer = """  </div>
 
   <div class="appstore">
     <h3>오프라인 리더 앱 내려받기</h3>
-    <a href="https://geo.itunes.apple.com/kr/app/namuwiki-offline-reader/id1078563836?mt=8" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/ko-kr/badge_appstore-lrg.svg) no-repeat;width:135px;height:40px;"></a>
-    <a href="https://geo.itunes.apple.com/us/app/namuwiki-offline-reader/id1078563836?mt=8" style="display:inline-block;overflow:hidden;background:url(http://linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:135px;height:40px;"></a>
+    <a href="https://geo.itunes.apple.com/kr/app/namuwiki-offline-reader/id1078563836?mt=8" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/images/badges/ko-kr/badge_appstore-lrg.svg) no-repeat;width:135px;height:40px;"></a>
+    <a href="https://geo.itunes.apple.com/us/app/namuwiki-offline-reader/id1078563836?mt=8" style="display:inline-block;overflow:hidden;background:url(//linkmaker.itunes.apple.com/images/badges/en-us/badge_appstore-lrg.svg) no-repeat;width:135px;height:40px;"></a>
     <br/>
     <br/>
   </div>
