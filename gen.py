@@ -56,8 +56,8 @@ def trouble():
     <ol>
       <li><a href="%s">나무위키 공식 덤프</a> 내려받기
       <li><a href="%s">덤프 포맷 변환 도구</a> 내려받기
-      <li>변환 도구를 이용해 데이터베이스 생성<br>(성능에 따라 수십분에서 한 시간 가량 소요)
-      <li>생성한 데이터베이스를 <a href="https://support.apple.com/ko-kr/HT201301" title="iPhone, iPad 및 iPod touch에서의 파일 공유에 관하여">iTunes 파일 공유</a>를 이용해서 복사하면 끝
+      <li>변환 도구를 이용해 데이터베이스 생성<br>(성능에 따라 수십분에서 한 시간 소요)
+      <li><a href="https://support.apple.com/ko-kr/HT201301" title="iPhone, iPad 및 iPod touch에서의 파일 공유에 관하여">iTunes 파일 공유</a>를 이용해서 복사
   </div>
 """%(link1,link2)
 
