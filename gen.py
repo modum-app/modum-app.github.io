@@ -21,7 +21,6 @@ header = """<!DOCTYPE html>
   a { color:royalblue; }
   h1 { font-size:1.3em; }
   h3 { font-size:1em; }
-  .github {}
   .container div.desc { font-size:0.8em; }
   .container span.filename {}
   .container span.filesize {}
@@ -39,10 +38,6 @@ header = """<!DOCTYPE html>
 
   <h1 class="title">나무위키 덤프</h1>
 
-  <div class="github">
-    <a href="https://github.com/modum-app/build-namuwiki-sql"><img style="position:absolute; top:0; right:0; border:0;" src="https://camo.githubusercontent.com/e7bbb0521b397edbd5fe43e7f760759336b5e05f/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f677265656e5f3030373230302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_green_007200.png"></a>
-  </div>
-
   <div class="container">
 """
 
@@ -53,6 +48,18 @@ def origin(filename):
   </div>
 """%(link,filename,link,)
 
+def trouble():
+  link1 = 'https://namu.wiki/w/나무위키:데이터베이스%20덤프'
+  link2 = 'https://github.com/modum-app/build-namuwiki-sql'
+  return """  <h3>직접 덤프 만들기</h3>
+  <div class="trouble">위 링크가 동작하지 않는 경우에는 직접 덤프를 만든 후 iTunes에서 기기로 복사할 수 있습니다.
+    <ol>
+      <li><a href="%s">나무위키 공식 덤프</a> 내려받기
+      <li><a href="%s">덤프 포맷 변환 도구</a> 내려받기
+      <li>변환 도구를 이용해 데이터베이스 생성 (컴퓨터 성능에 따라 수십분에서 한 시간 가량 소요)
+      <li>변환한 덤프를 <a href="https://support.apple.com/ko-kr/HT201301" title="iPhone, iPad 및 iPod touch에서의 파일 공유에 관하여">iTunes 파일 공유</a>를 이용해서 기기에 복사하면 끝
+  </div>
+"""%(link1,link2)
 
 footer = """  </div>
 
@@ -110,13 +117,15 @@ def main():
   normal.add(Storage.M, 'http://1drv.ms/1SCcwkX')
   normal.render()
 
-  sample = TableView('namuwiki-160202-sample.sql','9.1M','1d3c6ccb35a23a4394a1d1c13a7ecc21')
-  sample.add(Storage.D, 'https://dl.dropboxusercontent.com/u/22206273/namuwiki-160202-sample.sql')
-  sample.add(Storage.G, 'https://drive.google.com/open?id=0B6dpAIVkR_3-b2NXNVhhV2t2Z1E')
-  sample.add(Storage.M, 'http://1drv.ms/1QYBsTR')
-  sample.render()
+  #sample = TableView('namuwiki-160202-sample.sql','9.1M','1d3c6ccb35a23a4394a1d1c13a7ecc21')
+  #sample.add(Storage.D, 'https://dl.dropboxusercontent.com/u/22206273/namuwiki-160202-sample.sql')
+  #sample.add(Storage.G, 'https://drive.google.com/open?id=0B6dpAIVkR_3-b2NXNVhhV2t2Z1E')
+  #sample.add(Storage.M, 'http://1drv.ms/1QYBsTR')
+  #sample.render()
 
-  print origin('namuwiki160126.sql')
+  #print origin('namuwiki160126.sql')
+
+  print trouble()
 
   print footer
 
