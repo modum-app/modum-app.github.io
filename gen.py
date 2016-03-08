@@ -113,7 +113,7 @@ def main():
 
   normal = TableView('namuwiki-160308.sql','869M','e5c686c38c72f489a4541ac1ddcbda79')
   normal.add(Storage.D, 'https://dl.dropboxusercontent.com/u/22206273/namuwiki-160308.sql')
-  normal.add(Storage.G, 'https://docs.google.com/uc?export=download&confirm=yuBZ&id=0B6dpAIVkR_3-clNPM2RiVl84Zjg')
+  normal.add(Storage.G, 'https://docs.google.com/uc?id=0B6dpAIVkR_3-clNPM2RiVl84Zjg&export=download')
   #normal.add(Storage.M, 'http://1drv.ms/')
   normal.render()
 
