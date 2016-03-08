@@ -1,4 +1,4 @@
-var remote_filename = 'namuwiki-160202.sql';
+var remote_filename = 'namuwiki-160308.sql';
 
 var local = document.querySelector('#latest');
 var local_filename = local.getAttribute('data-filename');

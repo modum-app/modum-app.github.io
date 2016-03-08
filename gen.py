@@ -111,10 +111,10 @@ class Storage:
 def main():
   print header
 
-  normal = TableView('namuwiki-160202.sql','838M','39841b31f52c921302963e80085a5ece')
-  normal.add(Storage.D, 'https://dl.dropboxusercontent.com/u/22206273/namuwiki-160202.sql')
-  normal.add(Storage.G, 'https://drive.google.com/open?id=0B6dpAIVkR_3-MEFJLTd6bGRXNHM')
-  normal.add(Storage.M, 'http://1drv.ms/1SCcwkX')
+  normal = TableView('namuwiki-160308.sql','869M','e5c686c38c72f489a4541ac1ddcbda79')
+  normal.add(Storage.D, 'https://dl.dropboxusercontent.com/u/22206273/namuwiki-160308.sql')
+  normal.add(Storage.G, 'https://drive.google.com/open?id=0B6dpAIVkR_3-clNPM2RiVl84Zjg')
+  #normal.add(Storage.M, 'http://1drv.ms/')
   normal.render()
 
   #sample = TableView('namuwiki-160202-sample.sql','9.1M','1d3c6ccb35a23a4394a1d1c13a7ecc21')
