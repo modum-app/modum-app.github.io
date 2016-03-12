@@ -1,4 +1,7 @@
 var remote_filename = 'namuwiki-160308.sql';
+if ('setLatest' in window) {
+  setLatest(remote_filename);
+}
 
 var local = document.querySelector('#latest');
 var local_filename = local.getAttribute('data-filename');
