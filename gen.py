@@ -48,6 +48,17 @@ def origin(filename):
   </div>
 """%(link,filename,link,)
 
+def transfer():
+  link1 = 'https://modum-app.github.io/'
+  return """  <h3>내려받기가 느리거나 중간에 끊길 때</h3>
+  <div class="trouble">iOS 8 이상에서는 자동으로 백그라운드로 내려받기가 진행됩니다. 하지만, 기기의 상태에 따라서 내려받기 진행 상황이 제대로 표시되지 않거나 중단되는 경우가 종종 발생하는데, 이런 이유로 데이터베이스 내려받기가 어려운 경우에는 컴퓨터에서 내려받기를 하고 기기로 복사하는 방법을 사용해 주세요.
+    <ol>
+      <li>iTunes 설치된 컴퓨터에서 브라우저를 열고 <a href="%s">%s</a> 주소로 이동
+      <li>Mirror 중에서 빠른 곳으로 선택해서 컴퓨터로 내려받기
+      <li><a href="https://support.apple.com/ko-kr/HT201301" title="iPhone, iPad 및 iPod touch에서의 파일 공유에 관하여">iTunes 파일 공유</a>를 이용해서 복사
+  </div>
+"""%(link1,link1)
+
 def trouble():
   link1 = 'https://namu.wiki/w/나무위키:데이터베이스%20덤프'
   link2 = 'https://github.com/modum-app/build-namuwiki-sql'
@@ -124,6 +135,8 @@ def main():
   #sample.render()
 
   #print origin('namuwiki160126.sql')
+
+  print transfer()
 
   print trouble()
 
