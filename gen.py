@@ -123,11 +123,11 @@ class Storage:
 def main():
   print header
 
-  normal = TableView('namuwiki-160418.sql','855M','c4d34373a8a3fbb8485273aaaf7971d3')
-  normal.add(Storage.T, r'https://transfer.sh/alA4z/namuwiki-160418.sql')
-  normal.add(Storage.D, r'https://dl.dropboxusercontent.com/u/22206273/namuwiki-160418.sql')
-  normal.add(Storage.G, r'https://docs.google.com/uc?id=0B6dpAIVkR_3-OUJudjRuSldvSkk&export=download')
-  normal.add(Storage.M, r'https://onedrive.live.com/redir?resid=F35E2C0189B4AAB7!118&authkey=!ABN_PvTxQvWs61w&ithint=file%2csql')
+  normal = TableView('namuwiki-160426.sql','875M','341167072eef5016882ad3f810aceba8')
+  normal.add(Storage.T, r'https://transfer.sh/LU0gn/namuwiki-160426.sql')
+  #normal.add(Storage.D, r'https://dl.dropboxusercontent.com/u/22206273/namuwiki-160418.sql')
+  normal.add(Storage.G, r'https://docs.google.com/uc?id=0B6dpAIVkR_3-Q25IanNvdWhBelE&export=download')
+  #normal.add(Storage.M, r'https://onedrive.live.com/redir?resid=F35E2C0189B4AAB7!118&authkey=!ABN_PvTxQvWs61w&ithint=file%2csql')
   normal.render()
 
   #sample = TableView('namuwiki-160202-sample.sql','9.1M','1d3c6ccb35a23a4394a1d1c13a7ecc21')
