@@ -124,7 +124,7 @@ def main():
   print header
 
   normal = TableView('namuwiki-160916.sql','968M','73d819502ad8a54f015abcab996a7cb9')
-  normal.add(Storage.T, r'https://transfer.sh/mlChN/namuwiki-160916.sql')
+  normal.add(Storage.T, r'https://transfer.sh/kKyvq/namuwiki-160916.sql')
   #normal.add(Storage.D, r'')
   normal.add(Storage.G, r'https://docs.google.com/uc?id=0B4N-278KmVtwWWVBckdmSjdUeFk&export=download')
   #normal.add(Storage.M, r'')
