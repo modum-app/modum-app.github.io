@@ -123,10 +123,10 @@ class Storage:
 def main():
   print header
 
-  normal = TableView('namuwiki-160916.sql','968M','73d819502ad8a54f015abcab996a7cb9')
+  normal = TableView('namuwiki-161116.sql','1010M','0f2dc17f0a5f5b6f4b2066166a0e77ef')
   #normal.add(Storage.T, r'https://transfer.sh/kKyvq/namuwiki-160916.sql')
   #normal.add(Storage.D, r'')
-  normal.add(Storage.G, r'https://docs.google.com/uc?id=0B4N-278KmVtwWWVBckdmSjdUeFk&export=download')
+  normal.add(Storage.G, r'https://docs.google.com/uc?id=0B4N-278KmVtwa2xjb1dMWjVTNmc&export=download')
   #normal.add(Storage.M, r'')
   normal.render()
 
