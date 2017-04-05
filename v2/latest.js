@@ -1,4 +1,4 @@
-var remote_filename = 'namuwiki-161116.sql';
+var remote_filename = 'namuwiki-170405.sql';
 if ('setLatest' in window) {
   setLatest(remote_filename);
 }
